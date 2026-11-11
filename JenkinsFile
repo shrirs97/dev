@@ -9,11 +9,11 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'javac -version'
-                bat 'javac App.java AppTest.java'
+                bat 'javac App.java App.java'
             }
         }
         stage('Test') {
-            steps { bat 'java AppTest' }
+            steps { bat 'java App' }
         }
     }
 
